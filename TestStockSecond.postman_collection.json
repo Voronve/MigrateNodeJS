@@ -1,0 +1,286 @@
+{
+	"info": {
+		"_postman_id": "6bacdcee-be86-49cb-ad3c-846317416430",
+		"name": "TestStockSecond",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "addData",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "Exchange",
+							"value": "SAMPLE",
+							"type": "text"
+						},
+						{
+							"key": "Base",
+							"value": "BTC",
+							"type": "text"
+						},
+						{
+							"key": "Quote",
+							"value": "USD",
+							"type": "text"
+						},
+						{
+							"key": "TimeStart",
+							"value": "2019-01-15T18:43:00.000+00:00",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "PriceOpen",
+							"value": "5",
+							"type": "text"
+						},
+						{
+							"key": "PriceHigh",
+							"value": "10",
+							"type": "text"
+						},
+						{
+							"key": "PriceLow",
+							"value": "3",
+							"type": "text"
+						},
+						{
+							"key": "PriceClose",
+							"value": "8",
+							"type": "text"
+						},
+						{
+							"key": "VolumeTraded",
+							"value": "7",
+							"type": "text"
+						},
+						{
+							"key": "TradesCount",
+							"value": "10",
+							"type": "text"
+						},
+						{
+							"key": "source",
+							"value": "cryptocompare",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/assets",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"assets"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getData",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:3000/assets?exchange=SAMPLE2&base=BTC&quote=USD&dateStart=2019-06-12T09:09:35.453&dateFinish=2019-06-12T09:09:38.702",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"assets"
+					],
+					"query": [
+						{
+							"key": "exchange",
+							"value": "SAMPLE2"
+						},
+						{
+							"key": "base",
+							"value": "BTC"
+						},
+						{
+							"key": "quote",
+							"value": "USD"
+						},
+						{
+							"key": "dateStart",
+							"value": "2019-06-12T09:09:35.453"
+						},
+						{
+							"key": "dateFinish",
+							"value": "2019-06-12T09:09:38.702"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addAsset(new)",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "Exchange",
+							"value": "SAMPLE",
+							"type": "text"
+						},
+						{
+							"key": "Base",
+							"value": "BTC",
+							"type": "text"
+						},
+						{
+							"key": "Quote",
+							"value": "USD",
+							"type": "text"
+						},
+						{
+							"key": "source",
+							"value": "cryptocompare",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/newAssets",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"newAssets"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addData(new)",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "PriceOpen",
+							"value": "3629.8",
+							"type": "text"
+						},
+						{
+							"key": "PriceHigh",
+							"value": "3634.3",
+							"type": "text"
+						},
+						{
+							"key": "PriceLow",
+							"value": "3627.6",
+							"type": "text"
+						},
+						{
+							"key": "PriceClose",
+							"value": "3634.3",
+							"type": "text"
+						},
+						{
+							"key": "VolumeTraded",
+							"value": "5",
+							"type": "text"
+						},
+						{
+							"key": "TradesCount",
+							"value": "4",
+							"type": "text"
+						},
+						{
+							"key": "source",
+							"value": "cryptocompare",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/newAssets?AssetId=5cfe0666daa6281a1ced14b8",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"newAssets"
+					],
+					"query": [
+						{
+							"key": "AssetId",
+							"value": "5cfe0666daa6281a1ced14b8"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getData(new)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		}
+	]
+}
